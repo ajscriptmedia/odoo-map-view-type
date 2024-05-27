@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="leaflet_map.MapRenderer">
+        <div t-ref="map" style="height: 90vh;"/>
+    </t>
+</templates>

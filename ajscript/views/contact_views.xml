@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_ajs_contact_list" model="ir.ui.view">
+        <field name="name">view.ajs.contact.list</field>
+        <field name="model">ajs.contact</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ajs_contact_lmap" model="ir.ui.view">
+        <field name="name">view.ajs.contact.lmap</field>
+        <field name="model">ajs.contact</field>
+        <field name="arch" type="xml">
+            <lmap test="ajscript"/>
+        </field>
+    </record>
+
+    <record id="view_ajs_contact_form" model="ir.ui.view">
+        <field name="name">view.ajs.contact.form</field>
+        <field name="model">ajs.contact</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ajs_contact" model="ir.actions.act_window">
+        <field name="name">Contacts</field>
+        <field name="res_model">ajs.contact</field>
+        <field name="view_mode">tree,form,lmap</field>
+    </record>
+
+    <menuitem name="AJScript" id="menu_ajscript">
+        <menuitem name="Contacts" id="menu_ajs_contacts" action="action_ajs_contact"/>
+    </menuitem>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ajs_contact,access.ajs.contact,model_ajs_contact,base.group_user,1,1,1,1
