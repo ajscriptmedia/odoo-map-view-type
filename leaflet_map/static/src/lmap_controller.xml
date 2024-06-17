@@ -2,7 +2,7 @@
 <templates>
     <t t-name="leaflet_map.MapView">
         <Layout display="{ controlPanel:{} }">
-            <LeafletMapRenderer/>
+            <LeafletMapRenderer model="model" archInfo="props.archInfo"/>
         </Layout>
     </t>
 </templates>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_partner_lmap_view" model="ir.ui.view">
+        <field name="name">res.partner.lmap.view</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <lmap latitude="partner_latitude" longitude="partner_longitude">
+                <field name="name"/>
+                <field name="contact_address"/>
+            </lmap>
+        </field>
+    </record>
+    <record id="action_res_partner_lmap_view" model="ir.actions.act_window.view">
+        <field name="view_mode">lmap</field>
+        <field name="sequence" eval="10"/>
+        <field name="view_id" ref="res_partner_lmap_view"/>
+        <field name="act_window_id" ref="contacts.action_contacts"/>
+    </record>
+</odoo>

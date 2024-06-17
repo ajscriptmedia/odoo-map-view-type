@@ -7,3 +7,5 @@ class AjsContact(models.Model):
 
     name = fields.Char()
     age = fields.Integer()
+    latitude = fields.Float(digits=(10, 7))
+    longitude = fields.Float(digits=(10, 7))

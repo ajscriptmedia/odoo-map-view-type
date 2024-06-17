@@ -16,7 +16,10 @@
         <field name="name">view.ajs.contact.lmap</field>
         <field name="model">ajs.contact</field>
         <field name="arch" type="xml">
-            <lmap test="ajscript"/>
+            <lmap latitude="latitude" longitude="longitude">
+                <field name="name"/>
+                <field name="age"/>
+            </lmap>
         </field>
     </record>
 
@@ -29,6 +32,8 @@
                     <group>
                         <field name="name"/>
                         <field name="age"/>
+                        <field name="latitude"/>
+                        <field name="longitude"/>
                     </group>
                 </sheet>
             </form>

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="leaflet_map.MapRenderer">
-        <div t-ref="map" style="height: 90vh;"/>
+
+        <div class="row vh-100">
+            <div class="col-lg-2 ps-4 pe-0">
+                <h3 class="mt-2">Contacts</h3>
+                <ul>
+                    <li t-foreach="props.model.records" t-as="record" t-key="record.id">
+                        <span t-out="record.name"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-10 ps-0">
+                <div t-ref="map" style="height: 80vh;"/>
+            </div>
+        </div>
     </t>
 </templates>
